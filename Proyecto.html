@@ -1,0 +1,84 @@
+<!-- Harvey Abraham Hernandez Perez     0903-17-13612-->
+<!-- Oscar Eduardo Barrios Echeverria   0903-22-3395 -->
+<!-- Dany Otario Ramirez Barrios        0903-20-23598 -->
+<!--  Dolman Demetrio Fuentes Fuentes   0903-22-294-->
+
+0903-22-3395
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aprendamos Matemáticas</title>
+  <link rel="stylesheet" href="Proyecto.css">
+</head>
+<body>
+
+  <div id="loginScreen" class="centro">
+    <h1>Aprendamos Matemáticas</h1>
+    <p>Ingresa tu nombre y código para comenzar</p>
+    <input id="inputNombre" type="text" placeholder="Nombre" maxlength="30" />
+    <input id="inputCodigo" type="text" placeholder="Código (ej: A123)" maxlength="10" />
+    <button id="btnIniciar">Iniciar</button>
+    <p id="errorLogin" class="mensaje error oculto"></p>
+  </div>
+
+
+  <div id="menuScreen" class="oculto">
+    <header>
+      <h2 id="saludo">¡Hola!</h2>
+    </header>
+    <main>
+      <p>Elige una operación para practicar (15 preguntas):</p>
+      <div class="botonera">
+        <button class="opBtn" data-op="suma">Suma</button>
+        <button class="opBtn" data-op="resta">Resta</button>
+        <button class="opBtn" data-op="multiplicacion">Multiplicación</button>
+        <button class="opBtn" data-op="division">División</button>
+      </div>
+      <button id="btnCerrarSesion" class="secundario">Cerrar sesión</button>
+    </main>
+  </div>
+
+
+  <div id="gameScreen" class="oculto">
+    <header>
+      <h2 id="tituloOperacion"></h2>
+      <div id="infoAlumno">Alumno: <span id="alumnoNombre"></span> — Código: <span id="alumnoCodigo"></span></div>
+    </header>
+    <main>
+      <div id="estadoPreguntas">Pregunta <span id="numPregunta">0</span> / 15</div>
+      <div id="pregunta" class="preguntaTexto"></div>
+      <input id="respuesta" type="number" placeholder="Tu respuesta" />
+      <div class="controles">
+        <button id="verificar">Verificar</button>
+        <button id="siguiente">Siguiente</button>
+        <button id="btnVolverMenuJuego" class="secundario">Volver al menú principal</button>
+      </div>
+      <p id="feedback" class="mensaje"></p>
+      <div class="puntuaciones">
+        <div>Puntuación: <span id="puntuacion">0</span></div>
+        <div>Correctas: <span id="correctas">0</span></div>
+        <div>Incorrectas: <span id="incorrectas">0</span></div>
+      </div>
+    </main>
+  </div>
+
+
+  <div id="resultScreen" class="oculto centro">
+    <h2>Resultados</h2>
+    <p id="resumenAlumno"></p>
+    <p id="resumenResultado"></p>
+    <div class="botonesFinal">
+      <button id="btnReiniciar">Reiniciar juego</button>
+      <button id="btnVolverMenu" class="secundario">Volver al menú</button>
+    </div>
+  </div>
+
+  <footer>
+    <small>© 2025 — Proyecto Educativo Infantil</small>
+  </footer>
+
+  <script src="Proyecto.js"></script>
+</body>
+</html>
